@@ -26,7 +26,9 @@ def encode(password):
 def decode(password):
     oldPassword = ''
     for i in range(len(password)):
+        # decode by subtracting 3 from each int
         new = int(password[i]) - 3
+        # checks if new is within range, else adds ten
         if new < 0:
             new += 10
         oldPassword += str(new)
