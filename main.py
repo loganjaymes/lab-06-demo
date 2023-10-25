@@ -20,6 +20,8 @@ def encode(password):
 
     return newPassword
 
+def decode(password):
+    pass
 
 def main():
     option = 0
