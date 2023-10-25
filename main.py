@@ -1,3 +1,5 @@
+# Author: Logan Bjork
+
 def printMenu():
     print("Menu")
     print("-------------")
