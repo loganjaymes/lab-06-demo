@@ -24,20 +24,21 @@ def encode(password):
     return newPassword
 
 def decode(password):
+    oldPassword = ''
     for i in range(len(password)):
-        oldPassword = ''
         new = int(password[i]) - 3
         if new < 0:
-            new += 7
+            new += 10
         oldPassword += str(new)
     return oldPassword
 
 def main():
     option = 0
-
+    newPass = ''
     while True:
         printMenu()
         option = int(input("\nPlease enter an option: "))
+
 
         if option == 1:
             password = str(input("Please enter your password to encode: "))
