@@ -29,7 +29,7 @@ def decode(password):
         new = int(password[i]) - 3
         if new < 0:
             new += 7
-        oldPassword += new
+        oldPassword += str(new)
     return oldPassword
 
 def main():
