@@ -24,7 +24,13 @@ def encode(password):
     return newPassword
 
 def decode(password):
-    pass
+    for i in range(len(password)):
+        oldPassword = ''
+        new = int(password[i]) - 3
+        if new < 0:
+            new += 7
+        oldPassword += new
+    return oldPassword
 
 def main():
     option = 0
@@ -35,10 +41,11 @@ def main():
 
         if option == 1:
             password = str(input("Please enter your password to encode: "))
-            encode(password)
+            newPass = encode(password)
             print("Your password has been encoded and stored!")
         if option == 2:
-            pass
+            oldPass = decode(newPass)
+            print(f'The encoded password is {password}, and the original password is {oldPass}.')
         if option == 3:
             break
 
